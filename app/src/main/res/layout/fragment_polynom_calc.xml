@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.PolynomCalc.FragmentPolynomCalc">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#5E5C5C"
+        android:windowTranslucentNavigation="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="365dp"
+            android:background="#292727"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView3">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_writing_polynom"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_sixth"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:hint="writing expr"
+                android:textColorHint="#FAF7F7"
+                android:textSize="15sp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_ans_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_staples_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_derivative_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/void_two"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_sixth"
+                android:fontFamily="serif"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/button_derivative_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_mines_polynom"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="224dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_back_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_backspace_2"
+                android:contentDescription="back"
+                android:fontFamily="serif"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_staples_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_num_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.AppCompat.EditText"
+                android:id="@+id/button_derivative_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="F(x)|"
+                android:gravity="center"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_writing_polynom"
+                app:layout_constraintEnd_toStartOf="@+id/button_reverse_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_underivative_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/void_two"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_staples_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="( )"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/button_writing_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_back_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_underivative_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.AppCompat.EditText"
+                android:id="@+id/button_underivative_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="∫F(x)"
+                android:gravity="center"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_staples_polynom"
+                app:layout_constraintEnd_toStartOf="@+id/button_derivative_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_num_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_add_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.AppCompat.EditText"
+                android:id="@+id/button_add_polynom"
+                android:layout_width="250dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_sixth"
+                android:fontFamily="serif"
+                android:onClick="GetSymbolOnClick"
+                android:text="Add F(x)"
+                android:gravity="center"
+                android:textColor="#FAF7F7"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_underivative_polynom"
+                app:layout_constraintEnd_toStartOf="@+id/button_devide_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_plus_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_mines_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="-"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/void_two"
+                app:layout_constraintEnd_toStartOf="@+id/button_mul_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_plus_polynom"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_plus_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="+"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_add_polynom"
+                app:layout_constraintEnd_toStartOf="@+id/button_mines_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_clear_polynom"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_devide_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="/"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_reverse_polynom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_add_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_mul_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.AppCompat.EditText"
+                android:id="@+id/button_reverse_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                android:text="F(x)-1"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@+id/button_ans_polynom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_derivative_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_devide_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/Widget.AppCompat.EditText"
+                android:id="@+id/button_num_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="F(n)"
+                android:gravity="center"
+                android:textColor="#FAF7F7"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_back_polynom"
+                app:layout_constraintEnd_toStartOf="@+id/button_underivative_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/void_one"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_ans_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_seventh"
+                android:fontFamily="serif"
+                android:text="="
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_writing_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_reverse_polynom"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_mul_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_fourth"
+                android:fontFamily="serif"
+                android:text="×"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_devide_polynom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/button_mines_polynom"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_clear_polynom"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_sixth"
+                android:fontFamily="serif"
+                android:text="C"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/void_one"
+                app:layout_constraintEnd_toStartOf="@+id/button_plus_polynom"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/void_one"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/button_animation_sixth"
+                android:fontFamily="serif"
+                android:textColor="#FAF7F7"
+                android:textSize="30sp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toTopOf="@+id/button_num_polynom"
+                app:layout_constraintTop_toBottomOf="@+id/button_clear_polynom"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="34dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView3"
+            android:layout_width="match_parent"
+            android:layout_height="365dp"
+            android:contentDescription="back"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:id="@+id/historyLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"></LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="#FFCA0707"
+                    android:gravity="right|center_vertical"
+                    android:text="  "
+
+                    android:textColor="#FBF9F9"
+                    app:autoSizeMaxTextSize="60sp"
+                    app:autoSizeMinTextSize="20sp"
+                    app:autoSizeStepGranularity="2sp"
+                    app:autoSizeTextType="uniform"
+                    tools:ignore="MissingConstraints,RtlHardcoded,SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

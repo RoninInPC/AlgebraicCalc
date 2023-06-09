@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Info.FragmentInfo">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id = "@+id/info_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="  Welcome to the Algebro. This is algebraic calculator on the ring of residues.\n
+                1.There is support for the inverse element operation.\n
+                2.The division operation is a multiplication by the inverse element of the second number.\n
+                3.Double click on multiply button get a deegree operation.\n    Goodluck!"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

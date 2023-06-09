@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+        <item
+            android:title="R"
+            android:id="@+id/itemR"
+            android:visible="true"
+            app:showAsAction="always"
+            android:checkable="true"
+            android:checked="false"
+            android:orderInCategory="0"/>
+        <item
+            android:title="Field"
+            android:id="@+id/itemField"
+            android:visible="true"
+            app:showAsAction="always"
+            android:checkable="true"
+            android:checked="false"
+            android:orderInCategory="1"/>
+        <item
+            android:title="Polynom Field"
+            android:id="@+id/itemPolynomField"
+            android:visible="true"
+            app:showAsAction="always"
+            android:checkable="true"
+            android:checked="false"
+            android:orderInCategory="2"/>
+</menu>
